@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Amarante");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#alaska-logo {
+  width: 15%;
+  margin-left: 25px;
+}
+
+#nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#heading {
+  margin: 20px;
+  margin-top: 7px;
+  margin-left: 40px;
+  font-weight: lighter;
+  font-variant-caps: all-petite-caps;
+}
+
+.table {
+  margin: 0 auto;
+  width: 95%;
+  /* margin-left: 11%; */
+}
+
+#list {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+#list,
+tr,
+td {
+  border-bottom: 1px solid rgb(110, 110, 110);
+  border-left: 1px solid rgb(199, 197, 197);
+}
+
+#list #thead {
+  cursor: pointer;
+  background: #03508b;
+  color: white;
+}
+
+#list #thead tr th {
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 20px;
+  /* padding-left: 32px; */
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#list #tbody tr {
+  color: black;
+}
+
+#list #tbody tr td {
+  text-align: center;
+  padding: 10px 8px;
+  font-size: 17px;
+}
+
+#list #tbody td:nth-child(8) {
+  color: blue;
+  text-align: center;
+  cursor: pointer;
+}
+
+#add-dicom{
+  cursor: pointer;
+  padding: 8px;
+    color: white;
+    background-color: rgb(27, 111, 236);
+    border: none;
+    font-size: 15px;
+    padding-left:30px;
+    padding-right:30px ;
+    border-radius: 9px;
+    /* margin-left:78% ; */
+    float: right;
+    margin: 15px;
+}
+
+#search-patient, #search-modality{
+  padding: 10px;
+  border-color: 1px 1px -2px -1px grey;  
+  outline: none;
+  width: 250px;  
+  margin-right: 6px;
+}
+
+#album-name{
+  padding: 10px;
+  border-color: 1px 1px -2px -1px grey;  
+  outline: none;
+  width: 250px;  
+  margin-right: 6px;
+}
+
+#main-head {
+  /* padding-left: 10px; */
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+  margin-top: 1%;
+  /* margin-left: 2%; */
+  margin-bottom: 0px;
+}
+
+.hr {
+  height: 0px;
+  margin-left: 0px;
+  margin-bottom: 3%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 60px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 70%;
+}
+
+#dicom-image {
+  height: 80%;
+  width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#modal-head {
+  text-align: center;
+  margin: 6px;
+  margin-bottom: 16px;
+}
+
+#buttons {
+  align-items: center;
+  text-align: center;
+}
+
+#cancel-btn {
+  padding: 8px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 9px;
+  margin: 30px;
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: pointer;
+  background-color: rgb(252, 45, 45);
+}

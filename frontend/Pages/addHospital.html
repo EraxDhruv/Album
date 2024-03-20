@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/addHospital.css" />
+    <title>HMS | Add Hospital</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo">
+          <img
+            src="../Images/ALASKA-_LOGO_ON-WHITE.png"
+            alt=""
+            id="alaska-logo"
+          />
+        </div>
+        <div id="navbar">
+          <ul id="nav-list">
+            <li><a href="./hospitalListing.html">HOME</a></li>
+            <li><a href="./hospitalListing.html">HOSPITAL</a></li>
+            <li><a href="./login.html">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+      <h1 id="heading">Add Hospital</h1>
+      <hr class="hr">
+      <div id="form">
+        <h2 id="hospital-head">*Hospital Details </h2>
+        <div id="row1">
+        <span class="label">
+        <input type="text" id="input-name" placeholder="Hospital Name"/>
+        <span class="error" id="errorname">*Name is required</span>
+      </span>
+      <span class="label">
+            <input type="text" id="input-street-address" placeholder="Street Address"/>
+            <span class="error" id="errorstreet">*Street Address is required</span>
+          </span>
+          <span class="label">
+            <input type="text" id="input-city" placeholder="City"/>
+            <span class="error" id="errorcity">*City is required</span>
+            </span>
+          </div>
+          <div id="row2">
+            <span class="label">
+            <input type="text" id="input-state" placeholder="State"/>
+            <span class="error" id="errorstate">*State is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input-country" placeholder="Country"/>
+            <span class="error" id="errorcountry">*Country is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input-pincode" placeholder="Pincode"/>
+            <span class="error" id="errorpincode">*Pincode is required</span>
+            </span>
+          </div>
+
+        <div id="contact">
+          <h2 id="contact-head">*Contact Details 1</h2>
+          
+          <div id="contact-1">
+            <div id="row3">
+            <span class="label">
+            <input type="text" id="input-contact1-name" placeholder="Contact Name"/>
+            <span class="error" id="errorcontact1name">*Contact Name is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input-contact-number1" placeholder="Contact Number"/>
+            <span class="error" id="errorcontact1num">*Contact Number is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input-email1" placeholder="Email"/>
+            <span class="error" id="errorcontact1email">*Email is required</span>
+            </span>
+          </div>
+        </div>
+
+          <h2 id="contact-head">*Contact Details 2</h2>
+          
+          <div id="contact-2">
+            <div id="row4">
+            <span class="label">
+            <input type="text" id="input-contact2-name" placeholder="Contact Name"/>
+            <span class="error" id="errorcontact2name">*Contact Name is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input-contact-number2" placeholder="Contact Number"/>
+            <span class="error" id="errorcontact2num">*Contact Number is required</span>
+            </span>
+            <span class="label">
+            <input type="text" id="input2-email" placeholder="Email"/>
+            <span class="error" id="errorcontact2email">*Email is required</span>
+            </span>
+          </div>
+        </div>
+        </div>
+        <div id="buttons">
+            <button id="save-btn" type="submit" onclick="validatePayload(event)">Save</button>
+            <button id="cancel-btn" type="submit" onclick="cancelAdd(event)">Cancel</button>
+        </div>
+    </div>
+    </div>
+  </body>
+  <script src="../Scripts/addHospital.js"></script>
+</html>

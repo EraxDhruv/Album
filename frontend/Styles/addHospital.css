@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Amarante");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#alaska-logo {
+  width: 15%;
+  margin-left: 25px;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
+}
+
+.error{
+  color: #D8000C;
+  font-size: 12px;
+  margin: 0px;
+  visibility: hidden;
+  margin-left:24px;
+}
+
+#nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#heading {
+  padding-left: 30px;
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+  margin-top: 1%;
+  margin-left: 2%;
+}
+
+.hr{
+  height: 0px;
+  margin-left: 0px;
+  margin-top: 3px;
+}
+
+#form {
+  padding: 30px;
+  padding-left: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#row1, #row2, #row3, #row4{
+  display: flex;
+  flex-direction: row;
+}
+
+#name,
+#street-address,
+#city,
+#state,
+#country,
+#pincode,
+#contact1-name,
+#contact1-number, 
+#email1,
+#contact2-name,
+#contact2-number, 
+#email2
+{
+  font-size: 19px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#name{
+    margin: 20px;
+}
+
+#input-name,
+#input-street-address,
+#input-city,
+#input-state,
+#input-country,
+#input-pincode,
+#input-contact1-name,
+#input-contact-number1,
+#input-email1,
+#input-contact2-name,
+#input-contact-number2,
+#input2-email {
+  padding: 10px;
+  border-color: 1px 1px -2px -1px grey;  
+  outline: none;
+  width: 350px;
+  /* margin-right: 70px; */
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+#hospital-head,
+#contact-head {
+  margin: 20px;
+  margin-top: 7px;
+  font-weight: lighter;
+  font-variant-caps: all-petite-caps;
+}
+
+#buttons{
+    align-items: center;
+    text-align: center;
+}
+
+#save-btn, #cancel-btn{
+    padding: 8px;
+    color: white;
+    background-color: rgb(27, 111, 236);
+    border: none;
+    font-size: 15px;
+    padding-left:30px;
+    padding-right:30px ;
+    border-radius: 9px;
+    margin: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+#cancel-btn{
+  background-color: rgb(252, 45, 45);
+}

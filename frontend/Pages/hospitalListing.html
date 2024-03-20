@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/hospitalListing.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <title>HMS | Listing</title>
+    <script src="../Jquery/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo">
+          <img
+            src="../Images/Alaska-_LOGO_ON-WHITE.png"
+            alt=""
+            id="alaska-logo"
+          />
+        </div>
+        <div id="navbar">
+          <ul id="nav-list">
+            <li><a href="">HOME</a></li>
+            <li><a href="">HOSPITAL</a></li>
+            <li><a href="./login.html">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="margin-bottom: 16px" />
+      <div id="table-top">
+        <div id="search">
+          <input type="text" id="search-name" placeholder="Name" />
+          <input type="text" id="search-city" placeholder="City" />
+          <input type="text" id="search-code" placeholder="Code" />
+          <div id="btns">
+            <button id="search-btn" onclick="hospitalBySearch(event)">Search</button>
+            <button id="reset-search-btn" onclick="resetSearch()">Reset</button>
+          </div>
+        </div>
+        <div id="add-btn">
+          <a href="./addHospital.html"
+            ><button id="add-hospital">Add Hospital</button></a
+          >
+        </div>
+      </div>
+      <div class="table">
+        <table id="list" cellspacing="0" cellpadding="0">
+          <thead id="thead">
+            <tr id="head-tr">
+              <th>Sr.no.</th>
+              <th id="head-2">Name</th>
+              <th id="head-3">Code</th>
+              <th id="head-4">Address</th>
+              <th id="head-5">First Contact</th>
+              <th id="head-6">Second Contact</th>
+              <th id="head-7">DICOM</th>
+              <th id="head-8">Patients</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-head">UPLOAD DICOM</h2>
+          <input type="file" name="" id="dicomfile" />
+          <span class="message" id="confirmMessage">DICOM successfully uploaded.</span>
+          <div id="buttons">
+            <button id="save-btn" type="submit" onclick="submitDicom()">
+              Upload
+            </button>
+            <button id="cancel-btn" type="submit" onclick="cancelDicom()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../Scripts/hospitalListing.js"></script>
+</html>

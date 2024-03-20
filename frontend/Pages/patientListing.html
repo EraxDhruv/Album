@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/patientListing.css" />
+    <link rel="stylesheet" href="../Styles/hospitalListing.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <title>HMS | HOSPITAL PATIENTS</title>
+    <script src="../Jquery/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo">
+          <img
+            src="../Images/ALASKA-_LOGO_ON-WHITE.png"
+            alt=""
+            id="alaska-logo"
+          />
+        </div>
+        <div id="navbar">
+          <ul id="nav-list">
+            <li><a href="./hospitalListing.html">HOME</a></li>
+            <li><a href="./hospitalListing.html">HOSPITAL</a></li>
+            <li><a href="./login.html">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="heading">
+        <h1 id="hos-name-head"></h1>
+        <h1 id="main-head">HOSPITAL | PATIENTS</h1>
+      </div>
+      <hr class="hr" />
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+          <h2 id="modal-head">PATIENT DICOM</h2>
+          <span class="close">&times;</span>
+          </div>
+          <div id="dicom-image"></div>
+          <div id="dicom-patient-name"></div>
+          <div id="buttons">
+            <button id="cancel-btn" type="submit" onclick="cancelPatientDicom()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="table-top">
+        <div id="search">
+          <input type="text" id="search-name" placeholder="Name" />
+          <input type="text" id="search-patient" placeholder="PatientId" />
+          <input type="text" id="search-modality" placeholder="Modality" />
+          <div id="btns">
+            <button id="search-btn" onclick="dicomBySearch(event)">Search</button>
+            <button id="reset-search-btn" onclick="resetSearch()">Reset</button>
+          </div>
+        </div>
+        <input type="text" id="album-name" placeholder="Album" />
+          <div id="btns">
+            <button id="search-btn" onclick="addToAlbum(event)">Add </button>
+          </div>
+        <!-- <div id="add-btn">
+          <a href="./addDicom.html"
+            ><button id="add-dicom">Add Dicom</button></a
+          >
+        </div> -->
+      </div>
+      <div class="table">
+        <table id="list" cellspacing="0" cellpadding="0">
+          <thead id="thead">
+            <tr id="head-tr">
+              <th>Sr.no.</th>
+              <th id="head-2">Name</th>
+              <th id="head-7">Patient Id</th>
+              <th id="head-3">Sex</th>
+              <th id="head-4">Age</th>
+              <th id="head-5">Modality</th>
+              <th id="head-6">DoB</th>
+              <th>DICOM</th>
+              <th>Album</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        
+      </div>
+    </div>
+  </body>
+  <script src="../cornerstone/cornerstone.js"></script>
+  <script src="../cornerstone/cornerstoneWADOImageLoader.js"></script>
+  <script src="../cornerstone/cornerstoneWADOImageLoaderWebWorker.js"></script>
+  <script src="../cornerstone/dicomParser.js"></script>
+  <script src="../Scripts/patientListing.js"></script>
+</html>
